@@ -9,6 +9,8 @@
   --header-border: #ECECEC;
   --portfolio-item-border: #EEEEEE;
   --social-meadia-logo: #afb1b8;
+  --wawd-text-color: rgba(47, 48, 58, 0.8);
+  --card-overlay-color: rgba(33, 150, 243, 0.9);
 }
 
 /* body styles */
@@ -164,6 +166,24 @@ ul {
 
 .current-page.nav-link {
   color: var(--main-active-color);
+}
+
+.current-page {
+  position: relative;
+}
+
+.current-page::after {
+  content: '';
+
+  position: absolute;
+
+  border: 2px solid var(--main-active-color);
+  border-radius: 2px;
+  background-color: var(--main-active-color);
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .nav-link {
@@ -376,6 +396,35 @@ ul {
 .what-are-we-doing-list-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.img-wawd-container {
+  position: relative;
+}
+
+.wawd-text {
+font-weight: 700;
+line-height: 1.14;
+text-align: center;
+text-transform: uppercase;
+
+margin: 0;
+
+position: absolute;
+
+bottom: 0;
+left: 0;
+
+width: 100%;
+height: 70px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: var(--background-color);
+background-color: var(--wawd-text-color);
+}
+
 /* what are we doing section */
 
 /* our team section */
@@ -614,10 +663,53 @@ border-radius: 4px;
   margin-bottom: 0;
 }
 
+
 .portfolio-list-link:hover .card-wrapper,
 .portfolio-list-link:focus .card-wrapper{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.img-portfolio-container {
+  position: relative;
+}
+
+.img-portfolio-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-overlay-color);
+  opacity: 0;
+}
+
+.portfolio-list-link:hover .img-portfolio-container::before,
+.portfolio-list-link:focus .img-portfolio-container::before {
+  opacity: 1;
+}
+
+.portfolio-hover-text {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  
+  width: 322px;
+  height: 168px;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: var(--background-color);
+}
+
 
 .text-wrapper {
   border-color: var(--portfolio-item-border);
