@@ -114,8 +114,8 @@ ul {
 .link {
   text-decoration: none;
   color: var(--title-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .color {
@@ -299,6 +299,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
+  transition: color 250ms var(--transition);
+
   color: var(--title-color);
 
   display: block;
@@ -327,12 +329,15 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: var(--text-color);
-
   display: flex;
   align-items: center;
+
+  transition: color 250ms var(--transition);
+
   padding-top: 32px;
   padding-bottom: 32px;
+  
+  color: var(--text-color);
 }
 
 .envelope-icon {
@@ -591,10 +596,14 @@ ul {
 .our-team-social-media-list-link {
   width: 44px;
   height: 44px;
+
+  transition: background-color 250ms var(--transition);
 }
 
 .our-team-social-media-list-link {
   border-radius: 50%;
+
+
 }
 
 .icon-container {
@@ -651,12 +660,13 @@ ul {
 .clients-list-item-link {
   border: 1px solid var(--social-meadia-logo);
   border-radius: 4px;
+  transition: border-color 250ms var(--transition);
 }
 
 .clients-list-item-link:hover,
 .clients-list-item-link:focus {
   border-color: var(--main-active-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .client-icon-container {
@@ -919,6 +929,8 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
+  transition: color 250ms var(--transition);
+
   color: var(--transparent-white-color);
 }
 
@@ -959,6 +971,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms var(--transition);
 
   border-radius: 50%;
   width: 44px;
